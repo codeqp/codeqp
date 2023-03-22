@@ -1,0 +1,7 @@
+componentConfig: true
+domain: codeqp.com
+layout:
+- go.kubebuilder.io/v3
+projectName: codeqp
+repo: github.com/codeqp/codeqp
+version: "3"
