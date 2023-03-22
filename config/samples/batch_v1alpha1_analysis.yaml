@@ -1,0 +1,6 @@
+apiVersion: batch.codeqp.com/v1alpha1
+kind: Analysis
+metadata:
+  name: analysis-sample
+spec:
+  # TODO(user): Add fields here

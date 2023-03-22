@@ -1,0 +1,20 @@
+# permissions for end users to view analyses.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: analysis-viewer-role
+rules:
+- apiGroups:
+  - batch.codeqp.com
+  resources:
+  - analyses
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - batch.codeqp.com
+  resources:
+  - analyses/status
+  verbs:
+  - get

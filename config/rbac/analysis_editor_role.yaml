@@ -1,0 +1,24 @@
+# permissions for end users to edit analyses.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: analysis-editor-role
+rules:
+- apiGroups:
+  - batch.codeqp.com
+  resources:
+  - analyses
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - batch.codeqp.com
+  resources:
+  - analyses/status
+  verbs:
+  - get

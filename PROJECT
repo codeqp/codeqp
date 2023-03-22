@@ -4,4 +4,14 @@ layout:
 - go.kubebuilder.io/v3
 projectName: codeqp
 repo: github.com/codeqp/codeqp
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: codeqp.com
+  group: batch
+  kind: Analysis
+  path: github.com/codeqp/codeqp/api/v1alpha1
+  version: v1alpha1
 version: "3"

@@ -1,0 +1,34 @@
+
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - batch.codeqp.com
+  resources:
+  - analyses
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - batch.codeqp.com
+  resources:
+  - analyses/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - batch.codeqp.com
+  resources:
+  - analyses/status
+  verbs:
+  - get
+  - patch
+  - update
